@@ -50,7 +50,7 @@ export default function RootLayout({
         >
           <TooltipProvider>
             {children}
-            <Toaster />
+            <Toaster closeButton position="top-center" />
           </TooltipProvider>
         </ThemeProvider>
       </body>

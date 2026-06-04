@@ -21,8 +21,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-[backdrop-filter]:bg-background/60">
       <div className="container flex min-h-16 items-center mx-auto px-4 md:px-6 lg:px-8">
         <Link href="/" className="flex items-center space-x-2 mr-4">
-          <CommandIcon className="size-5!" />
-          <span className="font-bold">DevArmaniLMS</span>
+          <CommandIcon className="size-7! bg-primary text-white rounded-xl p-1" />
+          <span className="font-semibold text-white">DevArmaniLMS</span>
         </Link>
 
         <nav className="hidden md:flex md:flex-1 md:items-center md:justify-between space-x-4">

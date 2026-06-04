@@ -27,7 +27,6 @@ import { useState, useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 import { createLesson } from '../action';
 import { toast } from 'sonner';
-import { Textarea } from '@/components/ui/textarea';
 
 export function NewLessonModal({
   courseId,
@@ -98,24 +97,6 @@ export function NewLessonModal({
                   <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input placeholder="Lesson Name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem className="w-full">
-                  <FormLabel>Lesson Description</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Lesson Description"
-                      className="min-h-30"
-                      {...field}
-                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

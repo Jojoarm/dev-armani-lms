@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-export function useConstructUrl(key: string): string {
-  const [url, setUrl] = useState('');
+export function useConstructUrl(key: string): string | null {
+  const [url, setUrl] = useState<string | null>(null);
 
   useEffect(() => {
     if (!key) return;
@@ -11,7 +11,7 @@ export function useConstructUrl(key: string): string {
     fetch(`/api/s3/get-image?key=${encodeURIComponent(key)}`)
       .then((res) => res.json())
       .then((data) => setUrl(data.url))
-      .catch(() => setUrl(''));
+      .catch(() => setUrl(null));
   }, [key]);
 
   return url;
